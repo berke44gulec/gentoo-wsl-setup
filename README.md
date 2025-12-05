@@ -9,7 +9,7 @@ This repository documents the process of installing Gentoo Linux on Windows Subs
 * Windows Terminal
 
 ## Note
-It is recommended that you use current versions and use the updated download links at https://www.gentoo.org/downloads .
+It is recommended that use current versions and use the updated download links at https://www.gentoo.org/downloads .
 
 ## Troubleshooting Log
 
