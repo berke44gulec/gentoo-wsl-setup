@@ -1,0 +1,4 @@
+[wsl2]
+processors=5
+memory=3221225472
+defaultVhdSize=21474836480
