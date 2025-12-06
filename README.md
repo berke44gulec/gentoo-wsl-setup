@@ -1,6 +1,6 @@
 # Gentoo on WSL: Installation Notes and Troubleshooting
 
-This repository documents the process of installing Gentoo Linux on Windows Subsystem for Linux (WSL). It specifically focuses on real-world errors encountered during the installation and their solutions, serving as a practical supplement to the official Gentoo Wiki.
+This repository documents the process of installing Gentoo Linux on Windows Subsystem for Linux (WSL). It specifically focuses on real-world errors encountered during the installation and their solutions, serving as a practical supplement to the official Gentoo Wiki (https://wiki.gentoo.org/wiki/Gentoo_in_WSL).
 
 ## Prerequisites
 
