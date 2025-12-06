@@ -1,0 +1,30 @@
+---
+- name: Configure Gentoo WSL Environment
+  hosts: localhost
+  connection: local
+  become: yes
+  tasks:
+    - name: Synchronize portage tree (Optional)
+      community.general.portage:
+        sync: yes
+
+    - name: Make sure you have the essential packages installed
+      community.general.portage:
+        package:
+          - app-admin/sudo
+          - app-editors/vim
+          - dev-vcs/git
+          - dev-debug/strace
+          - net-analyzer/tcpdump
+        state: present
+
+    - name: Clean unnecessary dependencies (depclean)
+      community.general.portage:
+        depclean: yes
+
+    - name: Grant sudo permissions to the Wheel group
+      lineinfile:
+        path: /etc/sudoers
+        regexp: '^# %wheel ALL=\(ALL:ALL\) ALL'
+        line: '%wheel ALL=(ALL:ALL) ALL'
+        validate: 'visudo -cf %s'
