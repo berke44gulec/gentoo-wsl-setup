@@ -13,18 +13,6 @@ It includes my personal configurations for a resource-efficient workspace, Ansib
 * **WSL Tuning:** `.wslconfig` tailored for balanced resource usage between Windows and Linux.
 * **Battle-Tested Solutions:** A log of real-world installation errors and their fixes.
 
-## Repository Structure
-
-```text
-.
-├── ansible/
-│   └── playbook.yml    # Automation script for packages and users
-├── configs/
-│   ├── make.conf       # Portage compiler flags and USE settings
-│   └── .wslconfig      # WSL resource limits (RAM/CPU)
-├── screenshots/
-└── README.md
-
 Configuration & Optimization
 1. WSL Resource Limits (.wslconfig)
 To prevent the Linux VM from consuming all host RAM, copy the provided configuration file to your Windows user directory:
