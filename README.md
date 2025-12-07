@@ -1,5 +1,7 @@
 # Gentoo on WSL: Installation Notes and Troubleshooting
 
+![Gentoo WSL Fastfetch](screenshots/fastfetch.png)
+
 This repository documents the process of installing Gentoo Linux on Windows Subsystem for Linux (WSL). It specifically focuses on real-world errors encountered during the installation and their solutions, serving as a practical supplement to the official Gentoo Wiki (https://wiki.gentoo.org/wiki/Gentoo_in_WSL).
 
 ## Prerequisites
@@ -94,9 +96,9 @@ eclean-dist
 By default, imported WSL distributions log in as `root`. To configure WSL to use your standard user account by default, run the following command in **Windows PowerShell**:
 
 ```powershell
-# Replace 'berke' with your actual Linux username (usually UID 1000)
 Get-Item "HKCU:\Software\Microsoft\Windows\CurrentVersion\Lxss\*\DistributionName" | Where-Object { $_.GetValue("") -eq "Gentoo" } | Set-ItemProperty -Name "DefaultUid" -Value 1000
 ```
 
 ## License
+
 This project is licensed under the MIT License.
