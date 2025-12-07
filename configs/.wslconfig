@@ -1,3 +1,9 @@
+# WSL2 Resource Configuration
+# Adjust these values based on your system specifications
+# processors: Number of CPU cores allocated to WSL
+# memory: RAM allocation in bytes (3221225472 = 3GB)
+# defaultVhdSize: Maximum virtual disk size in bytes (21474836480 = 20GB)
+
 [wsl2]
 processors=5
 memory=3221225472
