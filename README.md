@@ -79,6 +79,7 @@ emerge --ask --verbose \
     app-misc/fastfetch \
     dev-vcs/git \
     dev-debug/strace \
+    net-misc/openssh
     net-analyzer/tcpdump
 ```
 
