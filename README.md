@@ -26,7 +26,6 @@ When attempting to download the Stage3 tarball using PowerShell, the standard `c
 Use the native PowerShell syntax or explicitly call `curl.exe`.
 
 ```powershell
-# Correct PowerShell command:
 Invoke-WebRequest -Uri "[https://distfiles.gentoo.org/releases/amd64/autobuilds/current-stage3-amd64-openrc/stage3-amd64-openrc-20251012T210603Z.tar.xz](https://distfiles.gentoo.org/releases/amd64/autobuilds/current-stage3-amd64-openrc/stage3-amd64-openrc-20251012T210603Z.tar.xz)" -OutFile C:\wsl\gentoo\stage3.tar.xz
 ````
 
