@@ -4,11 +4,13 @@
   connection: local
   become: yes
   tasks:
-    - name: Synchronize portage tree (Optional)
+    - name: Synchronize portage tree
       community.general.portage:
         sync: yes
+      tags:
+        - sync
 
-    - name: Make sure you have the essential packages installed
+    - name: Install essential packages
       community.general.portage:
         package:
           - app-admin/sudo
@@ -17,14 +19,20 @@
           - dev-debug/strace
           - net-analyzer/tcpdump
         state: present
+      tags:
+        - packages
 
-    - name: Clean unnecessary dependencies (depclean)
-      community.general.portage:
-        depclean: yes
-
-    - name: Grant sudo permissions to the Wheel group
+    - name: Configure sudo for wheel group
       lineinfile:
         path: /etc/sudoers
         regexp: '^# %wheel ALL=\(ALL:ALL\) ALL'
         line: '%wheel ALL=(ALL:ALL) ALL'
         validate: 'visudo -cf %s'
+      tags:
+        - sudo
+
+    - name: Clean unnecessary dependencies
+      community.general.portage:
+        depclean: yes
+      tags:
+        - cleanup
